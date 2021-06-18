@@ -1,0 +1,487 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+.inner {max-width: 1270px; margin: 0 auto;}
+body{font-family: 'Open Sans','Noto Sans KR', sans-serif;}
+.text{  position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* 헤더구역 시작 */
+#header {position: fixed; width:100%; top:0; left:0; z-index: 9999;}
+#header .background {height:90px; background:#000; position:relative;}
+#header h1 {position:absolute; top:20px; left:60px; }
+#header .membership{
+    position: absolute;
+    top:25px;
+    right:40px;
+    font-size: 11px;
+    color: #aaa;
+    font-weight: normal;
+}
+#header .membership a {
+    padding:0 15px;
+    line-height:44px;
+    color:#aaaaaa
+}
+#header .membership a:first-child {
+    position:relative 
+}
+#header .membership a:first-child::after {
+    content:'';
+    width:1px; height:10px; background:#aaa;
+    position:absolute; top:4px; right:-3px; 
+}
+#header .membership a:last-child {
+    padding-right:0; 
+}
+#header #nav { position:absolute; top:32px; left:50%; z-index:999; transform: translate(-50%);}
+#header #nav .depth1 > li {
+    float:left;
+    padding: 0 45px 29px;
+    font-size:18px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 30px;
+    color:#eeeeee;
+    position:relative;
+}
+#header #nav .depth2 {
+    position:absolute;
+    top:100%; left:0;
+    width:100%; 
+    height: 0px;
+    opacity: 0;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 20px 0;
+    letter-spacing: -0.02em;
+    color: #ccc;
+    transition:all 0.5s;
+    z-index: 99;
+    text-align: center;
+    border-left:0.5px solid #454545;
+}
+#header #nav .depth2:last-child{
+    border-right:0.5px solid #454545;
+}
+#header #nav:hover .depth1  > li > .depth2{
+    opacity: 1; height:190px;
+}
+#header #nav .depth1 >li:hover{
+    color:#fff;
+}
+#header #nav .depth1 >li::after{
+    content:''; width:100%; height:3px; background-color:none;
+    position: absolute; bottom:0%; left:0; 
+    transition: all 0.5s;
+}
+#header #nav .depth1 >li:hover::after{
+    background-color:#E95513;
+}
+#header #nav .depth2 > li {
+    line-height:30px;
+}
+#header #nav .depth2 > li:hover{
+    color:#fff;
+    text-decoration: underline;
+}
+#header .bgbox {
+    position:absolute;
+    top:100%;
+    left: 0;
+    width:100%;
+    height:0px; opacity: 0;
+    background-color:#333;
+    z-index:98;
+    transition:all 0.5s;
+}
+#header nav:hover + .bgbox {
+    height:190px; opacity: 1;
+}
+/* 헤더구역끝 */
+
+/* 메인구역 시작 */
+#main .slideOuter{
+    height:720px;
+    overflow: hidden;
+    margin-top: 90px;
+}
+#main .slideOuter .slide{
+    position:relative;
+}
+
+#main .slideOuter .text h2{
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 3px;
+    
+}
+#main .slideOuter .text h2 span{
+    color: #fff;
+    font-size: 66px;
+    font-weight: bold;
+    line-height: 66px;
+    padding: 15px 0 30px 0;
+    letter-spacing: 3px;
+    display: block;
+}
+#main .slideOuter .text p{
+    color: #eee;
+    font-size: 18px;
+    
+}
+#main .slideOuter .text p span{
+    display: block;
+}
+#main .service {padding:50px 15px 100px 15px; background:#f2f2f2}
+#main .service h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color:#333;
+}
+#main .service  p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #888;
+    padding: 0 0 30px 0;
+}
+#main .service ul li{
+    float:left; width:32.333%;
+    position:relative;
+}
+#main .service  ul li:nth-child(2) {
+    margin: 0 1.5%;
+}
+#main .service ul .text h3{
+    color: #fff;
+    font-size: 17px;
+    font-weight: normal;
+}
+#main .service ul .text h4{
+    color: #fff;
+    font-size: 34px;
+    font-weight: normal;
+    padding:5px 0 15px 0;
+}
+#main .service ul .text span{
+    border:1px solid #fff;
+    font-size:13px;
+    color:#fff;
+    padding: 5px 20px;
+}
+#main .service ul .imgbox{
+    background: orangered;
+    overflow: hidden;
+}
+#main .service ul .imgbox img{
+    transition:all 0.3s ;
+
+}
+#main .service ul li:hover .imgbox img{
+    transform: scale(1.1);
+    opacity:0.4;
+    transition:all 0.3s ;
+}
+#main .service ul .text span:hover{
+    background: #000;
+    border:1px solid #000;
+}
+
+#main .product .inner{
+    padding:50px 0 40px 0;
+    text-align: center;
+}
+#main .product h1{
+    font-size: 34px;
+    font-weight: bolder;
+    color: #333;
+}
+#main .product p {
+    font-size: 18px;
+    font-weight: normal;
+    color: #888;
+}
+#main .product ul li{
+    float: left; width:33.3333%;
+    position: relative;
+}
+#main .product .text{
+    opacity: 0;
+    top:60%;
+    transition:all 0.3s;
+}
+
+#main .product .text > h3 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom:13px;
+}
+#main .product .text > span {
+    border:1px solid #E95513;
+    font-size: 12px;
+    padding: 5px 25px 6px 25px;
+    background: #e95513;
+    color:#fff;
+}
+#main .product li:hover .text{
+    opacity:1;
+    top:50%;
+   /*  
+    display: inline-block;
+    position:absolute */
+}
+#main .product ul li .imgbox{
+    background:#000;
+}
+#main .product li:hover .imgbox img{
+    opacity: 0.3;
+}
+
+#main .creative{
+    max-width:1300px;
+    margin:0 auto;
+    padding-bottom: 80px;
+}
+
+#main .creative img{
+    float:left;
+    width:65%;
+    margin-top: 150px;
+}
+#main .creative article{
+    float: right;
+    width:31%;
+    margin-top: 150px;
+}
+#main .creative h1{
+    color: #111;
+    font-size: 60px;
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#main .creative h3{
+    color: #333;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    white-space:pre-line;
+}
+#main .creative p {
+    text-align: justify;
+    font-size: 17px;
+    color:#777;
+    margin-bottom: 30px;
+}
+#main .creative a {
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 30px 6px 30px;
+    border: 1px solid #777;
+}
+#main .honesty{
+    max-width: 1070px;
+    margin: 0 auto;
+    padding:80px 0;
+    border-top: 2px solid #EEEEEE;
+}
+#main .honesty img{
+    float: right;
+    width: 65%;
+}
+#main .honesty article{
+    float: left;
+    width:30%
+}
+#main .honesty article h1{
+    color: #111;
+    font-size: 60px;
+    margin: 50px 0 20px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#main .honesty article h3{
+    color: #333;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    font-weight: 570;
+    white-space:pre-line;
+}
+#main .honesty p {
+    text-align: justify;
+    font-size: 17px;
+    color:#777;
+    margin-bottom: 30px;
+}
+#main .honesty a {
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 30px 6px 30px;
+    border: 1px solid #777;
+    transition: all 0.3s;
+}
+#main .honesty a:hover{
+    background:#e95513;
+    color:#FFF;
+    border: 1px solid #E95513;
+}
+#main .business {
+    padding: 65px 15px 100px 15px;
+    background-color: #f2f2f2;
+}
+#main .business h1{
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: #333;
+}
+#main .business p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #888;
+}
+#main .business ul li{
+    float:left; width:25%;
+    padding:40px 10px 0 10px;
+    
+}
+#main .business ul .bot{
+    background-color: #fff;
+    padding: 15px;
+    
+}
+#main .business .imgbox img{
+    width:100%;
+    transition: all 0.3s;
+}
+#main .business h3{
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 3px;
+}
+#main .business h5{
+    color: #777;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 7px;
+}
+#main .business ul li .imgbox{
+    background:#000;
+    overflow: hidden;
+}
+#main .business li:hover .imgbox img{
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+#main .business li:hover h3{
+    color:#e95513
+}
+#main .inside {
+    background-image: url(../img/inside.jpg);
+    padding:120px 30px;
+}
+#main .inside > .cf { 
+    max-width: 980px;
+    margin:0 auto
+}
+#main .inside h1{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 590;
+    color: #fff;
+    letter-spacing: 1px;
+}
+#main .inside h3{
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    padding: 5px 0 30px 0;
+}
+#main .inside ul li{
+    float:left;
+    width:25%;
+    text-align: center;
+    
+}
+#main .inside ul li div{
+    border: 1px solid #aaa;
+    padding: 30px 15px 15px 15px;
+    border-radius: 10px;
+    margin-left:20px
+}
+#main .inside li h4{
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    margin-top: 15px
+}
+#main .inside li p {
+    font-size: 13px;
+    font-weight: normal;
+    color: #ddd;
+    margin: 5px 0 2px 0;
+}
+/* 메인구역 끝 */
+/* 푸터구역 시작 */
+#footer .back{
+    margin: 0 auto;
+    background-color:#111;
+    padding:17px 0;
+}
+#footer .back .bmenu{
+    text-align: center;
+    color:#ccc;
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+#footer .bmenu a{
+    padding:0 15px;
+    transition: all 0.3s;
+}
+#footer .bmenu a:hover{
+    color:#fff
+}
+#footer .back2{
+    padding:25px 0 60px 0;
+    background:#333;
+}
+#footer .sns{
+    text-align: center;
+    padding: 10px 0 14px 0;
+}
+#footer .sns a {
+    padding:0 3px;
+}
+#footer .info{
+    margin:0 auto;
+    color: #999;
+    font-size: 14px;
+    padding: 5px 0;
+    line-height: 24px;
+    text-align: center;
+    line-height: 1.8em;
+}
+#footer .info p:last-child{
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+}
+/* 푸터구역 끝 */
+.gotop {
+    position: fixed; right:10px; bottom:18px;
+    transition: all 0.4s;
+}
