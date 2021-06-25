@@ -1,0 +1,157 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+.inner {max-width: 1270px; margin: 0 auto;}
+body{font-family: 'Open Sans','Noto Sans KR', sans-serif;}
+.text{  position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.gotop {
+    position: fixed; right:10px; bottom:18px;
+    transition: all 0.4s;
+}
+/* 헤더구역 시작 */
+#header {position: fixed; width:100%; top:0; left:0; z-index: 9999;}
+#header .background {height:90px; background:#000; position:relative;}
+#header h1 {position:absolute; top:20px; left:60px; }
+#header .membership{
+    position: absolute;
+    top:25px;
+    right:60px;
+    font-size: 11px;
+    color: #aaa;
+    font-weight: normal;
+}
+#header .membership a {
+    padding:0 15px;
+    line-height:44px;
+    color:#aaaaaa
+}
+#header .membership a:first-child {
+    position:relative 
+}
+#header .membership a:first-child::after {
+    content:'';
+    width:1px; height:10px; background:#aaa;
+    position:absolute; top:4px; right:-3px; 
+}
+#header .membership a:last-child {
+    padding-right:0; 
+}
+#header #nav { position:absolute; top:32px; left:50%; z-index:999; transform: translate(-50%);}
+#header #nav .depth1 > li {
+    float:left;
+    padding: 0 45px 29px;
+    font-size:18px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 30px;
+    color:#eeeeee;
+    position:relative;
+}
+#header #nav .depth2 {
+    position:absolute;
+    top:100%; left:0;
+    width:100%; 
+    height: 0px;
+    opacity: 0;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 20px 0;
+    letter-spacing: -0.02em;
+    color: #ccc;
+    transition:all 0.5s;
+    z-index: 99;
+    text-align: center;
+    border-left:0.5px solid #454545;
+}
+#header #nav .depth2:last-child{
+    border-right:0.5px solid #454545;
+}
+#header #nav:hover .depth1  > li > .depth2{
+    opacity: 1; height:190px;
+}
+#header #nav .depth1 >li:hover{
+    color:#fff;
+}
+#header #nav .depth1 >li::after{
+    content:''; width:100%; height:3px; background-color:none;
+    position: absolute; bottom:0%; left:0; 
+    transition: all 0.5s;
+}
+#header #nav .depth1 >li:hover::after{
+    background-color:#E95513;
+}
+#header #nav .depth2 > li {
+    line-height:30px;
+}
+#header #nav .depth2 > li:hover{
+    color:#fff;
+    text-decoration: underline;
+}
+#header .bgbox {
+    position:absolute;
+    top:100%;
+    left: 0;
+    width:100%;
+    height:0px; opacity: 0;
+    background-color:#333;
+    z-index:98;
+    transition:all 0.5s;
+}
+#header nav:hover + .bgbox {
+    height:190px; opacity: 1;
+}
+/* 헤더구역 끝 */
+
+/* 푸터구역 시작 */
+#footer .back{
+    margin: 0 auto;
+    background-color:#111;
+    padding:17px 0;
+}
+#footer .back .bmenu{
+    text-align: center;
+    color:#ccc;
+    padding: 0 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+#footer .bmenu a{
+    padding:0 15px;
+    transition: all 0.3s;
+}
+#footer .bmenu a:hover{
+    color:#fff
+}
+#footer .back2{
+    padding:25px 0 60px 0;
+    background:#333;
+}
+#footer .sns{
+    text-align: center;
+    padding: 10px 0 14px 0;
+}
+#footer .sns a {
+    padding:0 3px;
+}
+#footer .info{
+    margin:0 auto;
+    color: #999;
+    font-size: 14px;
+    padding: 5px 0;
+    line-height: 24px;
+    text-align: center;
+    line-height: 1.8em;
+}
+#footer .info p:last-child{
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+}
+/* 푸터구역 끝 */

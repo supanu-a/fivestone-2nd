@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+#joinPage .joinTop{
+    background-image: url(../img/slide_2.jpg);
+    background-size: cover;
+    color: #fff;
+    padding: 200px 0 130px;
+    text-align: center;
+}
+#joinPage h2 {
+    font-size: 48px;
+}
+#joinPage p {
+    font-size: 12px;
+    margin-top:6px
+}
+#joinPage p i {
+    padding-right: 5px;
+}
+#joinPage .logjoin{
+    background: #eee;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+
+}
+#joinPage .logjoin h4{
+    display: inline-block; 
+    padding:15px 10px 14px 10px;
+    font-weight: bold;
+}
+#joinPage .logjoin h4 a {
+    padding-bottom: 12px; 
+    border-bottom: 1px solid #111;
+    color: #111;
+}
+#joinPage .logjoin h4 .login {
+    border-bottom: 0px solid #111;
+    color: #777777;
+}
+#joinPage .logjoin h4 .login:hover {
+    border-bottom: 1px solid #111;
+    color: #111;
+}
+.joinBox > h3{
+    font-size: 36px;
+    color:#222;
+    text-align: center;
+    margin-top: 50px;
+}
+.joinBox .info {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin: 5px 0 40px 0;
+}
+.joinBox .write {
+    background: #EEEEEE;
+    padding:20px 30px;
+    text-align: left;
+}
+.joinBox > .write > h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+.joinBox > .write > h5 {
+    font-size: 15px;
+    margin-top: 5px;
+    color: #787878;
+}
+.joinWrap { padding: 40px 0 0; }
+.joinWrap legend {display: block; color: #777777; font-size: 16px;}
+.joinWrap th,
+.joinWrap td {border: 1px solid #ccc; padding: 5px 10px; font-family:monospace;}
+
+.joinWrap col:nth-child(1) {
+    width: 125px;
+}
+.joinWrap col:nth-child(2) {
+    width: auto;
+}
+.joinWrap th {
+    font-size: 12px;
+    background: #f7f7f7;
+    color: #000000;
+    
+}
+.joinWrap td {
+    font-size: 12px;
+    color: #555555;
+} 
+.joinWrap input[type="text"],
+.joinWrap input[type="password"] {
+    border: 1px solid #555;
+    border-radius: 3px;
+    width: 150px;
+    height: 25px;
+    text-indent: 0.5em;
+}
+.joinWrap input[name="pw"] {margin-right: 15px;}
+.joinWrap #pid + button {
+    background-color: #d7ba9a;
+    color: #fff;
+    font-size: 10px;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+.joinWrap #pid + button i {
+    color:#99856F
+}
+.joinWrap #emcom{
+    height: 25px;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+.joinWrap input[type="radio"] + label {
+    margin-right: 10px;
+}
+.joinWrap input[type="radio"],
+.joinWrap input[type="radio"] + label {vertical-align: middle; padding:0 3px;}
+
+.joinWrap #sms {margin-right: 3px;}
+.joinWrap input[type="checkbox"] + label {
+    margin-right: 10px;
+}
+.joinWrap input[type="checkbox"],
+.joinWrap input[type="checkbox"] + label {vertical-align: middle; padding:0 5px;}
+
+.joinWrap .sub {
+    border-bottom: 1px solid #787878;
+    width: 1270px;
+    padding-top: 20px;
+}
+.joinWrap .btn {
+    padding: 30px 0 100px;
+    text-align: center;
+}
+.joinWrap .btn button {
+    width: 65px; height: 32px;
+    background: #4c4c4c; color:#fff;
+    margin: 0 1px;
+    
+}
+.joinWrap .btn button[type="reset"] {background: #7f7f7f;} 
